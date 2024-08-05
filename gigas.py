@@ -282,17 +282,17 @@ def find_giga_movies(actor_ids, director_ids, sorting):
 st.markdown("# :movie_camera: GIGAS")
 with st.form("gigas"):
     actors_select = st.multiselect(
-        "Select Gigas :",
+        "Select Actors :",
         gigas.keys(),
     )
 
     directors_select = st.multiselect(
-        "Select Gigas Directors :",
+        "Select Directors :",
         gigas_directors.keys(),
     )
     with st.expander("Click to add more GIGAS by text"):
-        others_actors = st.text_input("Input actors by text (Separate with comma)")
-        others_directors = st.text_input("Input directors or crew member by text (Separate with comma)")
+        others_actors = st.text_input("Input actors by text (separate with comma)")
+        others_directors = st.text_input("Input directors or crew member by text (separate with comma)")
 
     sort = st.radio("Sort by :", ["Popularity", "Date"], horizontal=True)
 
@@ -326,5 +326,9 @@ if submitted:
 #                    st.image(f"https://image.tmdb.org/t/p/original{gigas[actor]['profile']}", width=150)
 
 left_co, cent_co,last_co = st.columns(3)
+#with cent_co:
+#    st.image(f"https://image.tmdb.org/t/p/original{gigas[random.choice(list(gigas.keys()))]['profile']}", width=200)
+
+pict_list = ["Jean Gabin","Lino Ventura", "Bernard Blier", "Yves Montand", "Romy Schneider", "Alain Delon", "Jean-Paul Belmondo", "Paul Meurisse", "Simone Signoret"]
 with cent_co:
-    st.image(f"https://image.tmdb.org/t/p/original{gigas[random.choice(list(gigas.keys()))]['profile']}", width=200)
+    st.image(f"https://image.tmdb.org/t/p/original{gigas[random.choice(pict_list)]['profile']}", width=200)
