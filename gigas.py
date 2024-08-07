@@ -295,7 +295,7 @@ with st.form("gigas"):
         others_actors = st.text_input("Input actors by text (separate with comma)")
         others_directors = st.text_input("Input directors or crew member by text (separate with comma)")
 
-    sort = st.radio("Sort by :", ["Popularity", "Date"], horizontal=True)
+    sort = st.radio("Sort by :", ["Popularity", "Date", "Note"], horizontal=True)
 
     submitted=st.form_submit_button("Search :mag:")
 
