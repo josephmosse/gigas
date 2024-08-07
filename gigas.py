@@ -243,7 +243,8 @@ gigas_directors = {
 }
 sort_dict={
     "Date":"primary_release_date.asc",
-    "Popularity":"popularity.desc"}
+    "Popularity":"popularity.desc",
+    "Note":"vote_average.desc"}
 
 def get_giga_id(name):
     url = f"https://api.themoviedb.org/3/search/person?api_key={API_KEY}&query={name}"
