@@ -11,7 +11,7 @@ directors_ids_select = []
 actors_ids_text = []
 directors_ids_text = []
 
-st.cache_data
+@st.cache_data
 def load_data():
     with open('data/data.json', 'r') as fp:
         gigas = json.load(fp)
