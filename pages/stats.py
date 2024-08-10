@@ -24,7 +24,7 @@ metric3.metric('Carrer Span', f"{actor.get_first_movie().release_date[:4]} - {ac
 
 st.markdown("### Release date distribution")
 
-years_fig = px.histogram(actor.get_movies_per_year(), title=f"{selected_actor} Filmography", nbins=20
+years_fig = px.histogram(actor.get_movies_per_year(), title=f"{selected_actor} Filmography", nbins=20,
                         labels={"y": "Number of Movies", "value": "Date"})
 years_fig.update_traces(showlegend=False, )
 st.plotly_chart(years_fig)
