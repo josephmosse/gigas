@@ -19,7 +19,7 @@ def load_data():
     with open('data/genres.json', 'r') as fp:
         genres_dict = json.load(fp)
 
-    with open('data/genres.json', 'r') as fp:
+    with open('data/directors.json', 'r') as fp:
         gigas_directors = json.load(fp)
     return gigas, genres_dict, gigas_directors
 
